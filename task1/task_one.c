@@ -10,7 +10,7 @@ char **parse_arg(char *str, int flag) {
 	char delim0[] = " ,\n";
 	char delim1[] = "|\n";
 	int i = 0;
-	char *saveptr;
+	char *saveptr = NULL;
 	char **result = malloc(sizeof(char*) * 40);
 	if (flag == 1) {
 		for (char *token  = strtok_r(str, delim1, &saveptr); token != NULL; token = strtok_r(NULL, delim1, &saveptr)) {
@@ -70,8 +70,8 @@ static void run_cmd(char **cmd_seq) {
 
 int main () {
 	while (1) {
-		char *cmd;
-		size_t trash;
+		char *cmd = NULL;
+		size_t trash = 0;
 		getline(&cmd, &trash, stdin);
 		char **cmd_seq = parse_arg(cmd, 1);
 		run_cmd(cmd_seq);
