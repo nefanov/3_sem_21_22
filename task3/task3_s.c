@@ -11,9 +11,8 @@
 #include <fcntl.h>
 #include <sys/mman.h> /* mmap() is defined in this header */
 #include <fcntl.h>
-#include <mqueue.h>
 
-#define SZ 2048
+//#define SZ 2048
 
 int main(int argc, char *argv[])
 {

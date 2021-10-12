@@ -11,7 +11,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
-#define MSG_SIZE 2048
+//#define MSG_SIZE 2048
 // нужна структурка данных, в которой хранится тип сообщения и буфер
 typedef struct msgbuf {
  long    mtype;
@@ -84,27 +84,19 @@ int main(int argc, char *argv[])
 
   key_t key = ftok("/tmp", 'S');
 
-
-  if ((msqid = msgget(key, msgflg )) < 0) {
-    perror("msgget");
-    exit(1);
-  }
-  msgctl(msqid, IPC_RMID, NULL);
   if ((msqid = msgget(key, msgflg )) < 0) {
     perror("msgget");
     exit(1);
   }
 
 
-
-
-  for (int j = 0; j < atoi(argv[2]); ++j) {
+  for (int j = 0; j < atoi(argv[1]); ++j) {
     pid_t pid = fork();
     if (pid) {
       FILE *fp;
       message_buf sbuf;
       sbuf.mtype = 1;
-      fp = fopen(argv[1], "rb");
+      fp = fopen("file", "rb");
       int c;
       while ((c = fread(sbuf.mtext, sizeof(char), MSG_SIZE, fp))) {
         snd_death(0, msqid);       
@@ -118,10 +110,7 @@ int main(int argc, char *argv[])
     if (pid == 0) {
       FILE *f;
       message_buf  rbuf;
-      char res[42] = "";
-      strcat(res, "res_");
-      strcat(res, argv[1]);
-      f = fopen(res, "wb");
+      f = fopen("res", "wb");
       int len;
       while ((len = rcv(&rbuf, msqid))) {
        fwrite(rbuf.mtext, sizeof(char), len, f);
@@ -131,5 +120,6 @@ int main(int argc, char *argv[])
    }
 
  }
+ msgctl(msqid, IPC_RMID, NULL);
  return 0;
 }

@@ -12,9 +12,9 @@
 #include <sys/mman.h> /* mmap() is defined in this header */
 #include <fcntl.h>
 #include <sys/fcntl.h>
-#include <mqueue.h>
 
-#define SZ 2048
+
+//#define SZ 2048
 
 #define QNAME "/example"
 
@@ -29,11 +29,11 @@ int main(int argc, char *argv[])
  char buf[SZ];
  int c; 
 
- for (int j = 0; j < atoi(argv[2]); ++j) {
+ for (int j = 0; j < atoi(argv[1]); ++j) {
   pid_t pid = fork();
   if (pid) {
     FILE *fp;
-    fp = fopen(argv[1], "rb");
+    fp = fopen("file", "rb");
     if ((queue = mq_open(QNAME, O_WRONLY, 0666, &attr)) == -1) {
       perror("Client: mq open error");
       return 1;
@@ -54,10 +54,7 @@ int main(int argc, char *argv[])
 
   if (pid == 0) {
     FILE *f;
-    char res[42] = "";
-    strcat(res, "res_");
-    strcat(res, argv[1]);
-    f = fopen(res, "wb");
+    f = fopen("res", "wb");
     if ((server = mq_open(QNAME, O_RDONLY | O_CREAT, 0666, &attr)) == -1) {
       perror("Server: mq open failed");
       return 1;
