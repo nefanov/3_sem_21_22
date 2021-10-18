@@ -42,11 +42,11 @@ _init_zndkmq_info(TZndkMqInfo *info)
 int
 main(int argc, char *argv[])
 {
+  for (int i = 0; i < atoi(argv[1]); ++i) {
     pid_t pid = fork();
     if (pid==0) {
         FILE *f;
         f = fopen("res", "w");
-    int             stat   =  EXIT_SUCCESS;
     TZndkMqInfo    *info   = _get_zndkmq_info();
     struct mq_attr *attr;
     mqd_t           mq;
@@ -59,9 +59,8 @@ main(int argc, char *argv[])
 
     mq       =  mq_open(NAME_ZNDKMQ, O_RDWR | O_CREAT | O_EXCL, 0644, attr);
     if (mq  == (mqd_t)-1) {
-        //perror(" mq_open() error " NAME_ZNDKMQ);
+        perror(" mq_open() error " NAME_ZNDKMQ);
         printf(" %s():[L%4d]: mq_open() error (%d)\n", __func__, __LINE__, (int)mq);
-        stat = EXIT_FAILURE;
         goto err1;
     }
     info->mq = mq;
@@ -78,13 +77,12 @@ main(int argc, char *argv[])
     fclose(f);
     mq   =  mq_close(mq);
     if (mq == (mqd_t)-1) {
-        //perror(" mq_close() error " NAME_ZNDKMQ);
+        perror(" mq_close() error " NAME_ZNDKMQ);
         printf(" %s():[L%4d]: mq_close() error (%d)\n", __func__, __LINE__, (int)mq);
-        stat = EXIT_FAILURE;
     }
     err1:
     mq_unlink(NAME_ZNDKMQ);
-    return  stat;
+    return 0;
     }
 
 
@@ -110,7 +108,7 @@ main(int argc, char *argv[])
         if (c) {
         stat = mq_send(mq, wbuf, sizeof(wbuf), 0);
         if (stat < 0) {
-            //perror(" mq_send() error \n" NAME_ZNDKMQ);
+            perror(" mq_send() error \n" NAME_ZNDKMQ);
             stat = EXIT_FAILURE;
         }}
 
@@ -118,6 +116,7 @@ main(int argc, char *argv[])
     fclose(f);
     err2:
     mq_unlink(NAME_ZNDKMQ);
-    return  stat;
     }
+    }
+    return 0;
 }

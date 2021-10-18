@@ -27,4 +27,4 @@ echo "$((script -q -c "time ./f.o 10" /dev/null) 2>&1 | grep real | awk '{print 
 gcc task3_f.c -o f.o -DLEN_ZNDKMQ_BUF=8000 -lrt
 echo "$((script -q -c "time ./f.o 10" /dev/null) 2>&1 | grep real | awk '{print $2}' | sed  s/[sm]//g | sed s/,/./)"
 
-python hist.py
+python3 hist.py
