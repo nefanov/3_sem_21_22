@@ -16,7 +16,7 @@
 #include <math.h>
 #include <time.h>
 
-#define THREAD_NUMBER_LIMIT 500
+#define THREAD_NUMBER_LIMIT 300
 #define THREAD_NUM_INRERVAL 1
 #define START_NUM_THREADS 1
 
@@ -90,7 +90,8 @@ int main(int argc, char *argv[])
         thPar* argsArray = (thPar*)(calloc(numOfThreads, sizeof (thPar)));
         pthread_t* threadsArray = (pthread_t*)(calloc(numOfThreads, sizeof (pthread_t)));
 
-        clock_t time1 = clock();
+        struct timespec time1;
+        clock_gettime(CLOCK_REALTIME, &time1);
 
         for (long i = 0; i < numOfThreads; ++i) {
             argsArray[i].aboveOrUnderCurve = aboveOrUnderArray;
@@ -116,9 +117,13 @@ int main(int argc, char *argv[])
             sum += aboveOrUnderArray[i];
         }
 
-        clock_t time2 = clock();
+        struct timespec time2;
+        clock_gettime(CLOCK_REALTIME, &time2);
 
-        timeOfExecutions[iterations] = (double)(((double)(time2 - time1) / CLOCKS_PER_SEC));
+        double curTime = double(time2.tv_sec - time1.tv_sec) * 1000;                       //in millisecs
+        curTime += ((double)((time2.tv_nsec - time1.tv_nsec)) / 1000000);
+
+        timeOfExecutions[iterations] = curTime;
 
         double aboveCurve = (numOfPoints + sum) / 2;
         double underCurve = numOfPoints - aboveCurve;
@@ -139,7 +144,7 @@ int main(int argc, char *argv[])
     QLineSeries *series = new QLineSeries();
 
     for (int i = 0; i < iterations; ++i) {
-        series->append(START_NUM_THREADS + THREAD_NUM_INRERVAL*i, timeOfExecutions[i] * 1000);
+        series->append(START_NUM_THREADS + THREAD_NUM_INRERVAL*i, timeOfExecutions[i]);
     }
 
     QChart *chart = new QChart();
