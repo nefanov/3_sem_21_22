@@ -16,7 +16,7 @@ char ** parse_cmd(char* s, char* delim)
         {
                 cmds[i] = p;
                 i++;
-                if (i % 20 == 0)
+                if (i % 100 == 0)
                 	cmds = realloc(cmds, sizeof(char*)*20);
         }
         return cmds;
@@ -66,7 +66,7 @@ static void run_cmd(char *cmd)
 int main()
 {
 	while(1) {
-		char *cmd;
+		char *cmd = NULL;
 		size_t len = 0;
 		getline(&cmd, &len, stdin);
 		run_cmd(cmd);
