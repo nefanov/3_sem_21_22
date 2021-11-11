@@ -16,7 +16,7 @@ char ** parse_cmd(char* s, char* delim)
         {
                 cmds[i] = p;
                 i++;
-                if (i % 100 == 0)
+                if (i % 20 == 0)
                 	cmds = realloc(cmds, sizeof(char*)*20);
         }
         return cmds;
