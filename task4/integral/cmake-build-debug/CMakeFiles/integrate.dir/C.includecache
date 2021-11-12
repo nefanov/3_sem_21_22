@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kirillbogomolov/Desktop/hw/3_sem_21_22/task4/integral/src/main.c
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/ipc.h
+-
+sys/shm.h
+-
+math.h
+-
+pthread.h
+-
+string.h
+-
+time.h
+-
+unistd.h
+-
+
