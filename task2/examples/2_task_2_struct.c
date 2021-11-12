@@ -16,3 +16,8 @@ typedef struct pPipe {
         size_t len; // data length in intermediate buffer
         Ops actions;
 } Pipe;
+int main()
+{
+	return 0;
+}
+
