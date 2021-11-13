@@ -62,8 +62,6 @@ static void run_cmd(char *cmd)
 	return;
 }
 
-
-
 int main()
 {
 	while(1) {
