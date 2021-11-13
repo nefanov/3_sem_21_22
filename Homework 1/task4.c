@@ -32,6 +32,7 @@ void* goodpoints(void * arg){
 	pthread_mutex_lock(&mutex);
 	sum += s;
 	pthread_mutex_unlock(&mutex);
+	return 0;
 }
 int main()
 {

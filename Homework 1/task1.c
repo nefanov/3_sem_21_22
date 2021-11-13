@@ -11,7 +11,6 @@
 char ** parsing(char* string, char* delim)
 {
 	char ** com =malloc(sizeof(char*)*100);
-	char *s;
 	int i = 0;
         for (char *s = strtok(string,delim); s != NULL; s = strtok(NULL, delim))
         {
@@ -25,7 +24,6 @@ char ** parsing(char* string, char* delim)
 
 static void run_cmd(char *cmd)
 {	
-	int ec;
 	int i = 0;
 	char **com = parsing(cmd, "|\n");
 	int p[2];
@@ -45,7 +43,6 @@ static void run_cmd(char *cmd)
 			if (i>0)
 				close(fd_in);
 			fd_in = p[0];
-			ec = WEXITSTATUS(status);
 			i++; 
 		} else {
 			char **args = parsing(com[i], " ,\n");
@@ -61,8 +58,6 @@ static void run_cmd(char *cmd)
 	}
 	return;
 }
-
-
 
 int main()
 {
