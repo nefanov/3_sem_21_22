@@ -11,7 +11,6 @@
 #define PORT     8123 
 #define MAXLINE 1024 
   
-// Driver code 
 int main() { 
     int sockfd; 
     char buffer[MAXLINE]; 
