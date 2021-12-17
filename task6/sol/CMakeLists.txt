@@ -1,5 +1,5 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.10)
-PROJECT(system-service)
+PROJECT(sol)
 
 set(CMAKE_C_STANDARD 11)
 set(COMPILE_FLAGS "-Wall -Wextra")
