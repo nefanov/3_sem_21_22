@@ -1,259 +1,285 @@
-Next iteration on Fri Dec 17 16:02:22 2021
+Next iteration on Sat Dec 18 12:11:25 2021
 
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:24 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:26 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:28 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:30 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:32 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:34 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:36 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:38 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:40 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:43 2021
-
-adf_q1
- No changes
-dir1_b3
- Changes saved
-----------------------------------
-Next iteration on Fri Dec 17 16:02:45 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:47 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:49 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:51 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:53 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:55 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:57 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:02:59 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:03:01 2021
-
-adf_q1
- No changes
-dir1_b3
- No changes
-----------------------------------
-Next iteration on Fri Dec 17 16:03:03 2021
-
-adf_14.txt
+a2
  Backuped
-adf_q1
+14.txt
+ Backuped
+q1
+ Backuped
+a1
+ Backuped
+hel.txt
+ Backuped
+b3
+ Backuped
+----------------------------------
+Next iteration on Sat Dec 18 12:11:29 2021
+
+a2
  No changes
-dir1_b3
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:06 2021
+Next iteration on Sat Dec 18 12:11:33 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:08 2021
+Next iteration on Sat Dec 18 12:11:37 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:11 2021
+Next iteration on Sat Dec 18 12:11:41 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:13 2021
+Next iteration on Sat Dec 18 12:11:46 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:15 2021
+Next iteration on Sat Dec 18 12:11:50 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:17 2021
+Next iteration on Sat Dec 18 12:11:54 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:19 2021
+Next iteration on Sat Dec 18 12:11:58 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:21 2021
+Next iteration on Sat Dec 18 12:12:02 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:24 2021
+Next iteration on Sat Dec 18 12:12:06 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:26 2021
+Next iteration on Sat Dec 18 12:12:10 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:28 2021
+Next iteration on Sat Dec 18 12:12:15 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
-Next iteration on Fri Dec 17 16:03:30 2021
+Next iteration on Sat Dec 18 12:12:19 2021
 
-adf_14.txt
+a2
  No changes
-adf_q1
+14.txt
  No changes
-dir1_b3
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:23 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:27 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ Changes saved
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:31 2021
+
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+a2
+ File removed
+.goutputstream-U39HE1
+ File removed
+----------------------------------
+Next iteration on Sat Dec 18 12:12:36 2021
+
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:40 2021
+
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
  No changes
 ----------------------------------
 
-Demon has been interupted. Time: Fri Dec 17 16:03:32 2021
+Demon has been interupted. Time: Sat Dec 18 12:12:43 2021

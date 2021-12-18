@@ -106,10 +106,11 @@ short copyFile(char* absoluteTargetPath, char* absoluteBackfileName, _Bool creat
     return 0;
 }
 
-short diffTest(char* absoluteTargetPath, char* fileName)
-{
+short diffTest(char* absoluteTargetPath, char* dirBase ,char* fileName)
+{    
    char absoluteBackfileName[PATH_MAX];
    strcpy(absoluteBackfileName, backupDirectory);
+   strcpy(absoluteBackfileName+strlen(absoluteBackfileName), dirBase);
    strcpy(absoluteBackfileName+strlen(absoluteBackfileName), fileName);
 
    char tempNameErr[PATH_MAX];
@@ -210,14 +211,20 @@ void SearchDirectory(const char *name, char* dirBase, int benchmark) {
                     if (!strcmp(e -> d_name,".." ) || !strcmp(e -> d_name,"." )) //Ignore if it is the same or level above directory
                         continue;
 
-                    if(benchmark + 1 > 2)                                        // controlling dive level
+                    if(benchmark + 1 > 3)                                        // controlling dive level
                         continue;
 
                     char dirBaseCopy[PATH_MAX];
                     strcpy(dirBaseCopy, dirBase);
 
                     strcpy(dirBase + strlen(dirBase), e->d_name);
-                    strcpy(dirBase + strlen(dirBase), "_");
+                    strcpy(dirBase + strlen(dirBase), "/");
+
+                    char newDir[PATH_MAX];
+                    strcpy(newDir, backupDirectory);
+                    strcat(newDir, dirBase);
+
+                    mkdir(newDir, 0777);
 
                     SearchDirectory(strcat(Path,"/"), dirBase, benchmark + 1);   //Calls this function AGAIN, this time with the sub-name.
                     memset(dirBase, 0, strlen(dirBase));
@@ -225,10 +232,7 @@ void SearchDirectory(const char *name, char* dirBase, int benchmark) {
                 } else if (S_ISREG(info.st_mode)) { //Or did we find a regular file?
                     if(isTextFile(Path))
                     {
-                        char fullFileName[PATH_MAX];
-                        strcpy(fullFileName, dirBase);
-                        strcpy(fullFileName + strlen(fullFileName), e->d_name);
-                        diffTest(Path, fullFileName);
+                        diffTest(Path, dirBase, e->d_name);
                     }
                 }
             } else {
@@ -236,6 +240,8 @@ void SearchDirectory(const char *name, char* dirBase, int benchmark) {
             }
         }
     }
+
+    closedir(dir);
 
     return;
 }
@@ -324,6 +330,42 @@ short init(char* configFile, _Bool isDemon)
     return 1;
 }
 
+void removeCheck(const char *name, FILE* logF)
+{
+    DIR *dir = opendir(name);               //Assuming absolute pathname here.
+        if(dir) {
+            char Path[PATH_MAX], *EndPtr = Path;
+            struct stat info;                //Helps us know about stuff
+            struct dirent *e;
+            strcpy(Path, name);                  //Copies the current path to the 'Path' variable.
+            EndPtr += strlen(name);              //Moves the EndPtr to the ending position.
+            while ((e = readdir(dir)) != NULL) {  //Iterates through the entire directory.
+                strcpy(EndPtr, e -> d_name);       //Copies the current filename to the end of the path, overwriting it with each loop.
+
+                if (!stat(Path, &info)) {         //stat returns zero on success.
+                    if (S_ISDIR(info.st_mode)) {  //Are we dealing with a directory?
+                        if (!strcmp(e -> d_name,".." ) || !strcmp(e -> d_name,"." )) //Ignore if it is the same or level above directory
+                            continue;
+
+                        removeCheck(strcat(Path,"/"), logF);   //Calls this function AGAIN, this time with the sub-name.
+                    } else if (S_ISREG(info.st_mode)) { //Or did we find a regular file?
+                        if(info.st_atim.tv_sec <= lastDemonCheck)         // remove files, that has been removed in origin directory
+                        {
+                            remove(Path);
+
+                            fprintf(logF, "%s\n File removed\n", e->d_name);
+                        }
+                    }
+                } else {
+
+                }
+            }
+        }
+
+        closedir(dir);
+        return;
+}
+
 void demonWork()
 {
     while (1) {
@@ -338,14 +380,6 @@ void demonWork()
         SearchDirectory(targetDirectory, s, 1);
         free(s);
 
-        DIR *dir = opendir(backupDirectory);
-
-        if(dir == NULL)
-            continue;
-
-        struct stat info;
-        struct dirent *e;
-
         logF = fopen(logfileName, "a+");
 
         char nextFileName[PATH_MAX];
@@ -353,27 +387,11 @@ void demonWork()
         strcpy(nextFileName, backupDirectory);
         endPtr += strlen(nextFileName);
 
-        while ((e = readdir(dir)) != NULL) {
-
-            if (!strcmp(e -> d_name,".." ) || !strcmp(e -> d_name,"." ) || (strcmp(e->d_name, logfileName) == 0)) //Ignore if it is the same or level above directory
-                continue;
-
-            strcpy(endPtr, e->d_name);
-
-            stat(nextFileName, &info);
-
-            if(info.st_atim.tv_sec <= lastDemonCheck)         // remove files, that has been removed in origin directory
-            {
-                remove(nextFileName);
-
-                fprintf(logF, "%s\n File removed\n", e->d_name);
-            }
-        }
+        removeCheck(backupDirectory, logF);
 
         fprintf(logF, "----------------------------------\n");
 
         fclose(logF);
-        closedir(dir);
         lastDemonCheck = time(NULL);
 
         //kill(getpid(), SIGINT);
