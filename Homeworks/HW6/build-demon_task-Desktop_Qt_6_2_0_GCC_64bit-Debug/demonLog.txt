@@ -1,0 +1,285 @@
+Next iteration on Sat Dec 18 12:11:25 2021
+
+a2
+ Backuped
+14.txt
+ Backuped
+q1
+ Backuped
+a1
+ Backuped
+hel.txt
+ Backuped
+b3
+ Backuped
+----------------------------------
+Next iteration on Sat Dec 18 12:11:29 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:11:33 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:11:37 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:11:41 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:11:46 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:11:50 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:11:54 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:11:58 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:02 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:06 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:10 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:15 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:19 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:23 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:27 2021
+
+a2
+ No changes
+14.txt
+ No changes
+q1
+ No changes
+a1
+ Changes saved
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:31 2021
+
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+a2
+ File removed
+.goutputstream-U39HE1
+ File removed
+----------------------------------
+Next iteration on Sat Dec 18 12:12:36 2021
+
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+Next iteration on Sat Dec 18 12:12:40 2021
+
+14.txt
+ No changes
+q1
+ No changes
+a1
+ No changes
+hel.txt
+ No changes
+b3
+ No changes
+----------------------------------
+
+Demon has been interupted. Time: Sat Dec 18 12:12:43 2021
