@@ -1,0 +1,3 @@
+/Users/kirillbogomolov/Desktop/hw/3_sem_21_22/task2/solution/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kirillbogomolov/Desktop/hw/3_sem_21_22/task2/solution/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kirillbogomolov/Desktop/hw/3_sem_21_22/task2/solution/cmake-build-debug/CMakeFiles/solution.dir
