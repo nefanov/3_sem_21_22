@@ -21,7 +21,7 @@
 struct MapsLine;
 typedef struct MapsLine MapsLine;
 
-static int log_fd;
+FILE *log_fd;
 
 int start_log();
 char* get_time();
@@ -51,8 +51,9 @@ int start_service(pid_t tr_pid);
 
 
 int start_log() {
-  const char log_path[] = "../log/log.txt";
-  log_fd = open(log_path, O_CREAT | O_RDWR | O_APPEND, S_IRUSR | S_IWUSR);
+  log_fd = fopen("log.txt", "w");
+  printf("opened\n");
+  fprintf(log_fd, "opened\n");
   return 0;
 }
 
@@ -77,7 +78,7 @@ void create_log(const char* format, ...) {
   va_end(ptr);
   strcat(log, msg);
   strcat(log, "\n");
-  write(log_fd, log, strlen(log));
+  fprintf(log_fd, log);
 }
 
 
@@ -254,6 +255,7 @@ int PML_swap(MapsLine** Cur, int* cnt_cur, MapsLine** Next, int* cnt_next) {
 
 
 int main() {
+  start_log();
   pid_t pid;
   printf("Enter PID: ");
   scanf("%d", &pid);  
